@@ -1,7 +1,7 @@
 <h2 class="title">Home</h2>
 <div class="content-box">
   <div class="images-container" ng-repeat="image in images">
-    <img class="added-image" ng-src="{{ image.url }}" ng-dblclick="addToLikes(image)" /> <br />
+    <a href="#/image/{{ image._id }}"><img class="added-image" ng-src="{{ image.url }}" ng-dblclick="addToLikes(image)" /></a> <br />
     <div class="button-container">
       <button class="like-button" ng-click="addToLikes(image)">{{ image.likes }} {{ form }}</button>
       <button class="delete-button" ng-click="deleteMe(image._id)">Delete</button> <br />
