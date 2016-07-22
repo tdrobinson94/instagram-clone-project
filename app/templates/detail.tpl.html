@@ -2,9 +2,11 @@
 
 <div class="content-box">
   <div class="images-container" ng-repeat="image in images">
-    <img class="added-image" src="{{ image.url }}" /> <br />
+    <img class="added-image" ng-src="{{ image.url }}" /> <br />
     <div class="button-container">
-      <button class="edit-button">Edit</button>
+      <form class="edit-image-form">
+        <button class="edit-button">Edit</button>
+      </form>
       <button class="delete-button" ng-click="deleteMe(image._id)">Delete</button> <br />
     </div>
     <div class="image-name">{{ image.name }}</div>

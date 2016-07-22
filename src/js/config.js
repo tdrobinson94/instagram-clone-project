@@ -24,7 +24,7 @@ function config($stateProvider, $urlRouterProvider) {
 
   .state('root.add', {
     url: '/add',
-    templateUrl: 'templates/edit.tpl.html',
+    templateUrl: 'templates/add.tpl.html',
     controller: 'AddController'
   })
 

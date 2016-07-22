@@ -57,6 +57,7 @@
       }
       textarea{
         height: 100px;
+        border: 1px solid lightgray;
       }
       .button{
         padding: 10px 20px;
@@ -87,6 +88,7 @@
       display: inline-block;
       width: 200px;
       margin: 10px;
+      position: relative;
       .added-image{
         width: 200px;
         height: 150px;
@@ -96,21 +98,24 @@
         display: flex;
         justify-content: center;
         width: 200px;
+        position: absolute;
+        top: 128px;
         visibility: hidden;
         .like-button{
           font-size: 10px;
-          background: lightgray;
-          border: 1px solid lightgray;
+          background: black;
+          border: 1px solid black;
           border-radius: 3px;
-          margin-right: 60px;
+          margin-right: 35px;
           color: white;
+          opacity: .8;
         }
         .edit-button{
           font-size: 10px;
           background: lightgray;
           border: 1px solid lightgray;
           border-radius: 3px;
-          margin-right: 60px;
+          margin-right: 35px;
           color: white;
         }
         .delete-button{
@@ -120,6 +125,7 @@
           border-radius: 3px;
           color: white;
           margin-left: 60px;
+          opacity: .8;
         }
       }
       .image-name{

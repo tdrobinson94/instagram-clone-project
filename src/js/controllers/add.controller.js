@@ -3,6 +3,7 @@ function AddController($scope, $http, SERVER, $state){
 
 
   $scope.addImage = function(image){
+    image.likes = 0;
     $http.post(SERVER.URL, image).then( function(res){
       $state.go('root.home');
     });

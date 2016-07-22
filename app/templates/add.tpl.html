@@ -4,7 +4,6 @@
 <form name="imageForm"class="addImageForm" ng-submit="addImage(image)">
   <p class="control">
     <input name="name" type="text" class="input" placeholder="Image Name" ng-model="image.name" required/>
-    <span class="error" ng-show="imageForm.name.$error.required && imageForm.name.$error.$dirty">** Input Required! **</span><br />
   </p>
   <p class="control">
     <input type="text" class="input" placeholder="Image URL" ng-model="image.url" />

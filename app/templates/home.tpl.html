@@ -1,9 +1,9 @@
 <h2 class="title">Home</h2>
 <div class="content-box">
   <div class="images-container" ng-repeat="image in images">
-    <img class="added-image" src="{{ image.url }}" /> <br />
+    <img class="added-image" ng-src="{{ image.url }}" ng-dblclick="addToLikes(image)" /> <br />
     <div class="button-container">
-      <button class="like-button">Like</button>
+      <button class="like-button" ng-click="addToLikes(image)">{{ image.likes }} {{ form }}</button>
       <button class="delete-button" ng-click="deleteMe(image._id)">Delete</button> <br />
     </div>
     <div class="image-name">{{ image.name }}</div>
