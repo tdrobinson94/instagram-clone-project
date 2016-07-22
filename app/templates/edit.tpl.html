@@ -1,15 +1,16 @@
 <h2 class="title">Add or Edit Images</h2>
 
 
-<form class="addImageForm" ng-submit="addImage(image)">
+<form name="imageForm"class="addImageForm" ng-submit="addImage(image)">
   <p class="control">
-    <input type="text" class="input" placeholder="Image Name" ng-model="image.name" />
+    <input name="name" type="text" class="input" placeholder="Image Name" ng-model="image.name" required/>
+    <span class="error" ng-show="imageForm.name.$error.required && imageForm.name.$error.$dirty">** Input Required! **</span><br />
   </p>
   <p class="control">
     <input type="text" class="input" placeholder="Image URL" ng-model="image.url" />
   </p>
   <p class="control">
-    <input type="text" class="input" placeholder="Comment" ng-model="image.comment" />
+    <textarea type="text" class="input" placeholder="Comment" ng-model="image.comment"></textarea>
   </p>
   <p class="control">
     <button class="button">Add Image</button>

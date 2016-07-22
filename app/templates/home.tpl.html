@@ -1,1 +1,9 @@
-<h2 class="title">Home Page</h2>
+<h2 class="title">Home</h2>
+
+<div class="images-container">
+  <img class="added-image" src="{{ image.url }}" />
+  <button class="like-button">Like</button>
+  <button class="delete-button" ng-click="deleteMe(image._id)">Delete</button>
+  <span class="image-name">{{ image.name }}</span>
+  <span class="image-comment">{{ image.comment }}</span>
+</div>

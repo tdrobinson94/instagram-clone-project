@@ -10,7 +10,8 @@ function config($stateProvider, $urlRouterProvider) {
 
   .state('root.home', {
     url: '/',
-    templateUrl: 'templates/home.tpl.html'
+    templateUrl: 'templates/home.tpl.html',
+    controller: 'homeController'
 
   })
 
@@ -22,8 +23,8 @@ function config($stateProvider, $urlRouterProvider) {
 
   .state('root.edit', {
     url: '/edit',
-    templateUrl: 'templates/edit.tpl.html'
-
+    templateUrl: 'templates/edit.tpl.html',
+    controller: 'AddController'
   })
 
   $urlRouterProvider.otherwise('/');
