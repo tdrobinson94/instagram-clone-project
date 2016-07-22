@@ -1,4 +1,15 @@
-<h2 class="title">{{ singleImage.name }}</h2>
+<h2 class="title">Details</h2>
 
-
-<img class="single-added-image" ng-src="{{ singleImage.url }}" alt="{{ singleImage.name }}"/> <br />
+<div class="single-image-box">
+  <img class="single-added-image" ng-src="{{ singleImage.url }}" alt="{{ singleImage.name }}"/> <br />
+  <div class="single-image-info">
+    <span class="name">Image Name:</span> <br />
+    <div class="single-image-name">
+      {{ singleImage.name }}
+    </div>
+    <span class="comment">Comment:</span><br />
+    <div class="single-image-comment">
+      {{ singleImage.comment }}
+    </div>
+  </div>
+</div>
