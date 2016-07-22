@@ -14,6 +14,7 @@ import { homeController } from './controllers/home.controller';
 angular
 .module('app', ['ui.router'])
 .controller('AddController', AddController)
+.controller('homeController', homeController)
 .config(config)
 .constant('SERVER', serverConstant)
 

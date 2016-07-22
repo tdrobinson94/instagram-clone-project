@@ -1,4 +1,6 @@
 function AddController($scope, $http, SERVER, $state){
+  $scope.images = [];
+
 
   $scope.addImage = function(image){
     $http.post(SERVER.URL, image).then( function(res){

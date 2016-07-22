@@ -9,6 +9,7 @@
     background-color: #5C6BC0;
     position: fixed;
     top: 0px;
+    z-index: 3;
     .pages-container{
       height: 50px;
       display: flex;
@@ -73,6 +74,68 @@
         background-color: #FF7043;
         color: white;
         transition: all .2s ease-in-out;
+      }
+    }
+  }
+  .content-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    .images-container{
+      display: inline-block;
+      width: 200px;
+      margin: 10px;
+      .added-image{
+        width: 200px;
+        height: 150px;
+        border-radius: 3px;
+      }
+      .button-container{
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        visibility: hidden;
+        .like-button{
+          font-size: 10px;
+          background: lightgray;
+          border: 1px solid lightgray;
+          border-radius: 3px;
+          margin-right: 60px;
+          color: white;
+        }
+        .edit-button{
+          font-size: 10px;
+          background: lightgray;
+          border: 1px solid lightgray;
+          border-radius: 3px;
+          margin-right: 60px;
+          color: white;
+        }
+        .delete-button{
+          font-size: 10px;
+          background-color: red;
+          border: 1px solid red;
+          border-radius: 3px;
+          color: white;
+          margin-left: 60px;
+        }
+      }
+      .image-name{
+        text-align: center;
+        color: #C5CAE9;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .image-comment{
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+    .images-container:hover{
+      .button-container{
+        visibility: visible;
       }
     }
   }

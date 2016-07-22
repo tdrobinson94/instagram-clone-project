@@ -17,12 +17,13 @@ function config($stateProvider, $urlRouterProvider) {
 
   .state('root.detail', {
     url: '/detail',
-    templateUrl: 'templates/detail.tpl.html'
+    templateUrl: 'templates/detail.tpl.html',
+    controller: 'homeController'
 
   })
 
-  .state('root.edit', {
-    url: '/edit',
+  .state('root.add', {
+    url: '/add',
     templateUrl: 'templates/edit.tpl.html',
     controller: 'AddController'
   })

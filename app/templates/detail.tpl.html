@@ -1,1 +1,13 @@
 <h2 class="title">Detail Page</h2>
+
+<div class="content-box">
+  <div class="images-container" ng-repeat="image in images">
+    <img class="added-image" src="{{ image.url }}" /> <br />
+    <div class="button-container">
+      <button class="edit-button">Edit</button>
+      <button class="delete-button" ng-click="deleteMe(image._id)">Delete</button> <br />
+    </div>
+    <div class="image-name">{{ image.name }}</div>
+    <div class="image-comment">{{ image.comment }}</div>
+  </div>
+</div>
