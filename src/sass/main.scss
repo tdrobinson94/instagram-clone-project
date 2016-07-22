@@ -112,11 +112,12 @@
         }
         .edit-button{
           font-size: 10px;
-          background: lightgray;
-          border: 1px solid lightgray;
+          background-color: white;
+          border: 1px solid white;
           border-radius: 3px;
           margin-right: 35px;
-          color: white;
+          color: black;
+          opacity: .7;
         }
         .delete-button{
           font-size: 10px;
@@ -141,6 +142,68 @@
     }
     .images-container:hover{
       .button-container{
+        visibility: visible;
+      }
+    }
+  }
+  .content-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .detail-images-container{
+      display: flex;
+      width: 80%;
+      margin: 10px;
+      position: relative;
+      .detail-added-image{
+        width: 60%;
+        height: 300px;
+        border-radius: 3px;
+      }
+      .edit{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        display: inline-block;
+        .detail-edit-button{
+          font-size: 14px;
+          background-color: #5C6BC0;
+          border: 1px solid #5C6BC0;
+          border-radius: 3px;
+          color: white;
+          opacity: .7;
+        }
+      }
+      .delete{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        display: inline;
+        .detail-delete-button{
+          font-size: 14px;
+          background-color: red;
+          border: 1px solid red;
+          border-radius: 3px;
+          color: white;
+          opacity: .8;
+          float: left;
+        }
+      }
+      .detail-info{
+        margin: 0px 25px;
+        .detail-image-name{
+          color: #C5CAE9;
+          font-size: 20px;
+          margin: 0px 0px 15px 0px;
+        }
+        .detail-image-comment{
+          font-size: 15px;
+        }
+      }
+    }
+    .detail-images-container:hover{
+      .detail-button-container{
         visibility: visible;
       }
     }
