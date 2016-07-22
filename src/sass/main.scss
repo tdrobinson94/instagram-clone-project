@@ -9,19 +9,58 @@
     background-color: #5C6BC0;
     position: fixed;
     top: 0px;
-    .pages{
-      text-decoration: none;
-      margin: 50px;
-      color: white;
-      transition: color .2s ease-in-out;
-    }
-    .pages:hover{
-      color: #C5CAE9;
-      transition: color .2s ease-in-out;
+    .pages-container{
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      .pages{
+        text-decoration: none;
+        padding: 16px 50px;
+        color: white;
+        transition: color .2s ease-in-out;
+      }
+      .pages:hover{
+        color: #FF7043;
+        border-bottom: 3px solid #8C9EFF;
+        transition: all .2s ease-in-out;
+      }
+      .pages:active{
+        border-bottom: 3px solid #FF7043;
+        transition: all .2s ease-in-out;
+      }
     }
   }
   .title{
     margin-top: 70px;
     text-align: center;
+    color: #C5CAE9;
+  }
+  .addImageForm{
+    .control{
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+      .input{
+        width: 400px;
+        padding: 10px;
+      }
+      .button{
+        padding: 10px 20px;
+        background-color: #5C6BC0;
+        border: 1px solid #5C6BC0;
+        color: white;
+        transition: all .2s ease-in-out;
+      }
+      .button:hover{
+        background-color: #C5CAE9;
+        color: #5C6BC0;
+        transition: all .2s ease-in-out;
+      }
+      .button:active{
+        background-color: #FF7043;
+        color: white;
+        transition: all .2s ease-in-out;
+      }
+    }
   }
 }
