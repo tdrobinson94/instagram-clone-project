@@ -109,6 +109,7 @@
           margin-right: 35px;
           color: white;
           opacity: .8;
+          outline: none;
         }
         .edit-button{
           font-size: 10px;
@@ -127,13 +128,22 @@
           color: white;
           margin-left: 60px;
           opacity: .8;
+          outline: none;
         }
       }
-      .image-name{
-        text-align: center;
-        color: #C5CAE9;
-        font-size: 14px;
-        margin-bottom: 5px;
+      a{
+        text-decoration: none;
+        .image-name{
+          text-align: center;
+          color: #C5CAE9;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
+      a:hover{
+        .image-name{
+          color: #FF7043;
+        }
       }
       .image-comment{
         text-align: center;
@@ -158,7 +168,7 @@
       position: relative;
       .detail-added-image{
         width: 60%;
-        height: 300px;
+        height: 50%;
         border-radius: 3px;
       }
       .edit{
@@ -214,10 +224,24 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  .single-added-image{
+  .single-image-container{
     width: 60%;
-    height: 70%;
     margin: 20px;
+    position: relative;
+    .single-added-image{
+      width: 100%;
+      height: 70%;
+    }
+    .single-like-button{
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      background-color: #5C6BC0;
+      color: white;
+      border: 1px solid #5C6BC0;
+      outline: none;
+    }
   }
   .single-image-info{
     margin: 20px;
@@ -231,6 +255,265 @@
     .single-image-comment{
       color: #5C6BC0;
       margin-top: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .container{
+    width: 100%;
+    .navbar{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #5C6BC0;
+      position: fixed;
+      top: 0px;
+      z-index: 3;
+      .pages-container{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        .pages{
+          text-decoration: none;
+          padding: 16px 50px;
+          color: white;
+          transition: color .2s ease-in-out;
+        }
+        .pages:hover{
+          color: #FF7043;
+          border-bottom: 3px solid #8C9EFF;
+          transition: all .2s ease-in-out;
+        }
+        .pages:active{
+          border-bottom: 3px solid #FF7043;
+          transition: all .2s ease-in-out;
+        }
+      }
+    }
+    .image-container{
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+      .header-image{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+      }
+    }
+    .title{
+      margin-top: 20px;
+      text-align: center;
+      color: #C5CAE9;
+    }
+    .addImageForm{
+      .control{
+        display: flex;
+        justify-content: center;
+        margin: 25px;
+        .input{
+          width: 600px;
+          padding: 10px;
+        }
+        textarea{
+          height: 100px;
+          border: 1px solid lightgray;
+        }
+        .button{
+          padding: 10px 20px;
+          background-color: #5C6BC0;
+          border: 1px solid #5C6BC0;
+          color: white;
+          transition: all .2s ease-in-out;
+        }
+        .button:hover{
+          background-color: #C5CAE9;
+          color: #5C6BC0;
+          transition: all .2s ease-in-out;
+        }
+        .button:active{
+          background-color: #FF7043;
+          color: white;
+          transition: all .2s ease-in-out;
+        }
+      }
+    }
+    .content-box{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex-wrap: wrap;
+      .images-container{
+        display: inline-block;
+        width: 350px;
+        margin: 10px;
+        position: relative;
+        .added-image{
+          width: 350px;
+          height: 250px;
+          border-radius: 3px;
+        }
+        .button-container{
+          display: flex;
+          justify-content: center;
+          width: 350px;
+          position: absolute;
+          top: 220px;
+          visibility: hidden;
+          .like-button{
+            font-size: 10px;
+            background: black;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-right: 140px;
+            color: white;
+            opacity: .8;
+            outline: none;
+          }
+          .delete-button{
+            font-size: 10px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 3px;
+            color: white;
+            margin-left: 80px;
+            opacity: .8;
+            outline: none;
+          }
+        }
+        a{
+          text-decoration: none;
+          .image-name{
+            text-align: center;
+            color: #C5CAE9;
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+        }
+        a:hover{
+          .image-name{
+            color: #FF7043;
+          }
+        }
+        .image-comment{
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+      .images-container:hover{
+        .button-container{
+          visibility: visible;
+        }
+      }
+    }
+    .content-box{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .detail-images-container{
+        display: flex;
+        width: 80%;
+        margin: 10px;
+        position: relative;
+        .detail-added-image{
+          width: 50%;
+          height: 100px;
+          border-radius: 3px;
+        }
+        .edit{
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          display: inline-block;
+          .detail-edit-button{
+            font-size: 14px;
+            background-color: #5C6BC0;
+            border: 1px solid #5C6BC0;
+            border-radius: 3px;
+            color: white;
+            opacity: .7;
+            font-size: 10px;
+          }
+        }
+        .delete{
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
+          display: inline;
+          .detail-delete-button{
+            font-size: 14px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 3px;
+            color: white;
+            opacity: .8;
+            float: left;
+            font-size: 10px;
+          }
+        }
+        .detail-info{
+          margin: 0px 25px;
+          .detail-image-name{
+            color: #C5CAE9;
+            font-size: 20px;
+            margin: 0px 0px 15px 0px;
+            font-size: 14px;
+          }
+          .detail-image-comment{
+            font-size: 15px;
+            font-size: 12px;
+          }
+        }
+      }
+      .detail-images-container:hover{
+        .detail-button-container{
+          visibility: visible;
+        }
+      }
+    }
+  }
+  .single-image-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    .single-image-container{
+      width: 80%;
+      margin: 20px;
+      position: relative;
+      .single-added-image{
+        width: 100%;
+        height: 70%;
+      }
+      .single-like-button{
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background-color: #5C6BC0;
+        color: white;
+        border: 1px solid #5C6BC0;
+        outline: none;
+      }
+    }
+    .single-image-info{
+      margin: 20px;
+      width: 80%;
+      .single-image-name{
+        font-size: 20px;
+        color: #C5CAE9;
+        margin-bottom: 24px;
+        margin-top: 15px;
+      }
+      .single-image-comment{
+        color: #5C6BC0;
+        margin-top: 13px;
+      }
     }
   }
 }
